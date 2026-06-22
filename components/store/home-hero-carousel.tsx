@@ -57,8 +57,8 @@ export function HomeHeroCarousel() {
   }, [totalSlides]);
 
   return (
-    <section className="page-pad pb-8 pt-6">
-      <div className="relative mx-auto h-[260px] max-w-[1690px] overflow-hidden rounded-[26px] shadow-[0_10px_24px_rgba(0,0,0,0.14)] sm:h-[360px] lg:h-[500px]">
+    <section className="home-shell pb-8 pt-6 sm:pt-7">
+      <div className="relative mx-auto h-[390px] overflow-hidden rounded-[18px] shadow-[0_14px_34px_rgba(0,0,0,0.14)] sm:h-[430px] lg:aspect-[16/4.9] lg:h-auto lg:max-h-[470px] lg:min-h-[380px] lg:rounded-[24px]">
         <div
           data-testid="home-hero-track"
           className="flex h-full w-full transition-transform duration-700 ease-out"
@@ -72,18 +72,18 @@ export function HomeHeroCarousel() {
                 aria-hidden="true"
               />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(25,45,46,0.74)_0%,rgba(25,45,46,0.53)_36%,rgba(25,45,46,0.16)_72%)]" />
-              <div className="absolute inset-y-0 left-0 flex max-w-[780px] items-center px-8 sm:px-12 lg:px-20">
+              <div className="absolute inset-y-0 left-0 flex w-full max-w-[760px] items-center px-6 sm:px-10 lg:px-16 xl:px-20">
                 <div className="text-white">
-                  <p className="inline-flex rounded-full bg-[#ef7f41] px-5 py-2 text-[0.95rem] font-semibold tracking-[0.03em]">
+                  <p className="inline-flex rounded-full bg-[#ef7f41] px-4 py-2 text-[0.78rem] font-semibold tracking-[0.03em] sm:px-5 sm:text-[0.9rem]">
                     {slide.badge}
                   </p>
-                  <h1 className="mt-7 max-w-[680px] text-[2rem] font-bold leading-[1.1] sm:text-[3rem] lg:text-[4rem]">
+                  <h1 className="mt-6 max-w-[650px] text-[2.25rem] font-bold leading-[1.08] sm:text-[3rem] lg:text-[clamp(3rem,3.45vw,3.85rem)]">
                     {slide.title}
                   </h1>
-                  <p className="mt-5 text-[1rem] sm:text-[1.15rem]">{slide.subtitle}</p>
+                  <p className="mt-4 max-w-[520px] text-[0.98rem] leading-7 sm:text-[1.12rem]">{slide.subtitle}</p>
                   <Link
                     href={slide.ctaHref}
-                    className="mt-8 inline-flex rounded-[14px] border border-white/90 bg-white px-7 py-3 text-[1rem] font-semibold !text-[#4d251c] shadow-[0_8px_20px_rgba(0,0,0,0.18)] transition hover:bg-[#fff7f2] hover:!text-[#4d251c] visited:!text-[#4d251c]"
+                    className="mt-7 inline-flex rounded-[12px] border border-white/90 bg-white px-6 py-3 text-[0.95rem] font-semibold !text-[#4d251c] shadow-[0_8px_20px_rgba(0,0,0,0.18)] transition hover:bg-[#fff7f2] hover:!text-[#4d251c] visited:!text-[#4d251c] sm:px-7 sm:text-[1rem]"
                     style={{ color: "#4d251c" }}
                   >
                     {slide.ctaText}

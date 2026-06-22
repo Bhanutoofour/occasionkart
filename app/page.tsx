@@ -260,19 +260,19 @@ export default async function Home() {
         />
         <HomeHeroCarousel />
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div>
             <h2 className="text-left text-[24px] font-semibold leading-[1.15] text-black sm:text-[2rem] sm:leading-tight">
               Shop By Category
             </h2>
-            <div className="mt-6 grid grid-cols-2 gap-4 sm:mt-7 sm:gap-5 lg:grid-cols-4">
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:mt-6 sm:gap-5 lg:grid-cols-4">
               {categoryCards.map((card) => (
                 <Link
                   key={card.title}
                   href="/cakes"
-                  className="group overflow-hidden rounded-[20px] border border-[rgba(0,0,0,0.1)] bg-white shadow-[0_10px_26px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(0,0,0,0.1)]"
+                  className="group overflow-hidden rounded-[14px] border border-[rgba(0,0,0,0.1)] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(0,0,0,0.1)]"
                 >
-                  <div className="relative h-[148px] overflow-hidden sm:h-[220px] lg:h-[260px]">
+                  <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10] lg:aspect-[5/3]">
                     <img
                       src={card.image}
                       alt={card.title}
@@ -297,9 +297,9 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div className="flex items-center justify-between gap-4">
-            <h2 className="whitespace-nowrap text-left text-[24px] font-semibold leading-[1.15] text-black sm:text-[2rem] sm:leading-tight">
+            <h2 className="text-left text-[24px] font-semibold leading-[1.15] text-black sm:text-[2rem] sm:leading-tight">
               Shop By Occasion
             </h2>
             <Link href="/cakes" className="shrink-0 text-[1rem] text-[#ef7f41]">
@@ -330,7 +330,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div className="flex items-start justify-between text-left">
             <h2 className="text-left text-[2rem] font-semibold text-black">Bestselling Cakes</h2>
             <Link href="/cakes" className="text-[1rem] text-[#ef7f41]">
@@ -344,7 +344,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div className="flex items-center justify-between">
             <h2 className="text-[2rem] font-semibold text-black">Shop by Price</h2>
             <Link href="/cakes" className="text-[1rem] text-[#ef7f41]">
@@ -364,7 +364,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div className="rounded-[22px] border border-[rgba(0,0,0,0.12)] bg-[#fff7f2] px-6 py-8 sm:px-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
@@ -393,7 +393,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div className="flex items-center justify-between">
             <h2 className="text-[2rem] font-semibold text-black">Customer Reviews</h2>
             <Link href="/testimonials" className="text-[1rem] text-[#ef7f41]">
@@ -460,9 +460,9 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div className="flex items-center gap-6">
-            <h2 className="whitespace-nowrap text-[2rem] font-semibold text-black">
+            <h2 className="text-[1.6rem] font-semibold leading-tight text-black sm:text-[2rem]">
               Corporate Clients We Serve
             </h2>
             <div className="hidden h-px flex-1 bg-[rgba(0,0,0,0.12)] md:block" />
@@ -498,9 +498,9 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div className="flex items-start justify-between text-left">
-            <h2 className="whitespace-nowrap text-left text-[2rem] font-semibold text-black">
+            <h2 className="text-left text-[1.6rem] font-semibold leading-tight text-black sm:text-[2rem]">
               Festive / Seasonal Picks
             </h2>
             <Link href="/cakes" className="text-[1rem] text-[#ef7f41]">
@@ -514,7 +514,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad py-6">
+        <section className="home-shell home-section">
           <div className="flex items-start justify-between text-left">
             <h2 className="text-left text-[2rem] font-semibold text-black">New in Occasionkart</h2>
             <Link href="/cakes" className="text-[1rem] text-[#ef7f41]">
@@ -528,7 +528,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="page-pad pb-6 pt-2">
+        <section className="home-shell pb-6 pt-2">
           <div className="rounded-[22px] border border-[rgba(0,0,0,0.1)] bg-[#fffaf6] p-6 sm:p-8">
             <h2 className="text-[1.45rem] font-semibold text-[var(--brand-brown)] sm:text-[1.7rem]">
               Order Cake Online in Hyderabad with Trusted Local Delivery
@@ -562,7 +562,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="mt-3 border-t border-[rgba(0,0,0,0.08)] bg-white page-pad py-10">
+        <section className="home-shell mt-3 border-t border-[rgba(0,0,0,0.08)] bg-white py-10">
           <div className="mx-auto grid max-w-[1650px] gap-10 md:grid-cols-2 xl:grid-cols-4">
             {features.map((feature) => (
               <div key={feature.title} className="text-center">
