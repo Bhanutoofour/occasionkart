@@ -1,0 +1,41 @@
+{
+  "name": "ock-cakes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "images:replace-host": "node scripts/replace-product-image-host.mjs",
+    "images:migrate:cloudinary": "node scripts/migrate-product-images-to-cloudinary.mjs"
+  },
+  "dependencies": {
+    "better-auth": "^1.6.5",
+    "next": "16.2.3",
+    "nodemailer": "^8.0.5",
+    "pg": "^8.20.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^20",
+    "@types/nodemailer": "^8.0.0",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "jsdom": "^29.0.2",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.1.5"
+  }
+}

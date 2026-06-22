@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffaf5;
+  --foreground: #2b1812;
+  --brand-red: #bd271a;
+  --brand-maroon: #6f1d2a;
+  --brand-brown: #4d251c;
+  --brand-gold: #f4b56b;
+  --cream-strong: #fff3ea;
+  --line: rgba(77, 37, 28, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Segoe UI", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  overflow-x: clip;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  overflow-x: clip;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.section-kicker {
+  color: var(--brand-red);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin-top: 0.6rem;
+  max-width: 14ch;
+  color: var(--brand-brown);
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.98;
+  font-weight: 600;
+}
+
+.page-pad {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.page-pad-tight {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.review-marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: review-scroll 24s linear infinite;
+}
+
+.review-marquee:hover .review-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes review-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-pad {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .page-pad-tight {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-pad {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .page-pad-tight {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section-title {
+    max-width: 100%;
+  }
+
+  .review-marquee-track {
+    gap: 16px;
+  }
+}
