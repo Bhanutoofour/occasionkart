@@ -262,10 +262,10 @@ export default async function Home() {
 
         <section className="home-shell home-section">
           <div>
-            <h2 className="text-left text-[24px] font-semibold leading-[1.15] text-black sm:text-[2rem] sm:leading-tight">
+            <h2 className="home-section-heading text-left">
               Shop By Category
             </h2>
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:mt-6 sm:gap-5 lg:grid-cols-4">
+            <div className="mt-5 grid grid-cols-1 gap-4 min-[460px]:grid-cols-2 sm:mt-6 sm:gap-5 lg:grid-cols-4">
               {categoryCards.map((card) => (
                 <Link
                   key={card.title}
@@ -298,15 +298,15 @@ export default async function Home() {
         </section>
 
         <section className="home-shell home-section">
-          <div className="flex items-center justify-between gap-4">
-            <h2 className="text-left text-[24px] font-semibold leading-[1.15] text-black sm:text-[2rem] sm:leading-tight">
+          <div className="home-section-header">
+            <h2 className="home-section-heading text-left">
               Shop By Occasion
             </h2>
             <Link href="/cakes" className="shrink-0 text-[1rem] text-[#ef7f41]">
               View All →
             </Link>
           </div>
-          <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
+          <div className="mt-6 grid grid-cols-1 gap-4 min-[460px]:grid-cols-2 md:grid-cols-4 md:gap-5">
             {occasionCards.map((card) => (
               <Link
                 key={card.title}
@@ -331,13 +331,13 @@ export default async function Home() {
         </section>
 
         <section className="home-shell home-section">
-          <div className="flex items-start justify-between text-left">
-            <h2 className="text-left text-[2rem] font-semibold text-black">Bestselling Cakes</h2>
+          <div className="home-section-header text-left">
+            <h2 className="home-section-heading text-left">Bestselling Cakes</h2>
             <Link href="/cakes" className="text-[1rem] text-[#ef7f41]">
               View All →
             </Link>
           </div>
-          <div className="mt-7 grid grid-cols-2 gap-4 md:gap-5 xl:grid-cols-5">
+          <div className="mt-6 grid grid-cols-1 gap-4 min-[460px]:grid-cols-2 md:grid-cols-3 md:gap-5 xl:grid-cols-5">
             {bestsellers.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -345,8 +345,8 @@ export default async function Home() {
         </section>
 
         <section className="home-shell home-section">
-          <div className="flex items-center justify-between">
-            <h2 className="text-[2rem] font-semibold text-black">Shop by Price</h2>
+          <div className="home-section-header">
+            <h2 className="home-section-heading">Shop by Price</h2>
             <Link href="/cakes" className="text-[1rem] text-[#ef7f41]">
               View All →
             </Link>
@@ -368,7 +368,7 @@ export default async function Home() {
           <div className="rounded-[22px] border border-[rgba(0,0,0,0.12)] bg-[#fff7f2] px-6 py-8 sm:px-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <h2 className="text-[2rem] font-semibold text-black">Customize Your Cake</h2>
+                <h2 className="home-section-heading">Customize Your Cake</h2>
                 <p className="mt-3 text-[1rem] text-[#6c7396]">
                   Choose size, flavor, message, and delivery slot. We handle the rest.
                 </p>
@@ -394,8 +394,8 @@ export default async function Home() {
         </section>
 
         <section className="home-shell home-section">
-          <div className="flex items-center justify-between">
-            <h2 className="text-[2rem] font-semibold text-black">Customer Reviews</h2>
+          <div className="home-section-header">
+            <h2 className="home-section-heading">Customer Reviews</h2>
             <Link href="/testimonials" className="text-[1rem] text-[#ef7f41]">
               View All →
             </Link>
@@ -462,12 +462,12 @@ export default async function Home() {
 
         <section className="home-shell home-section">
           <div className="flex items-center gap-6">
-            <h2 className="text-[1.6rem] font-semibold leading-tight text-black sm:text-[2rem]">
+            <h2 className="home-section-heading">
               Corporate Clients We Serve
             </h2>
             <div className="hidden h-px flex-1 bg-[rgba(0,0,0,0.12)] md:block" />
           </div>
-          <div className="-mx-5 mt-6 flex gap-4 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:overflow-visible sm:px-0 sm:pb-0 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-8">
+          <div className="-mx-4 mt-6 flex gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
             {clients.map((client) => (
               <div
                 key={client.name}
@@ -499,15 +499,15 @@ export default async function Home() {
         </section>
 
         <section className="home-shell home-section">
-          <div className="flex items-start justify-between text-left">
-            <h2 className="text-left text-[1.6rem] font-semibold leading-tight text-black sm:text-[2rem]">
+          <div className="home-section-header text-left">
+            <h2 className="home-section-heading text-left">
               Festive / Seasonal Picks
             </h2>
             <Link href="/cakes" className="text-[1rem] text-[#ef7f41]">
               View All →
             </Link>
           </div>
-          <div className="mt-7 grid grid-cols-2 gap-4 md:gap-5 xl:grid-cols-5">
+          <div className="mt-6 grid grid-cols-1 gap-4 min-[460px]:grid-cols-2 md:grid-cols-3 md:gap-5 xl:grid-cols-5">
             {seasonalPicks.map((product) => (
               <ProductCard key={`seasonal-${product.id}`} product={product} />
             ))}
@@ -515,13 +515,13 @@ export default async function Home() {
         </section>
 
         <section className="home-shell home-section">
-          <div className="flex items-start justify-between text-left">
-            <h2 className="text-left text-[2rem] font-semibold text-black">New in Occasionkart</h2>
+          <div className="home-section-header text-left">
+            <h2 className="home-section-heading text-left">New in Occasionkart</h2>
             <Link href="/cakes" className="text-[1rem] text-[#ef7f41]">
               View All →
             </Link>
           </div>
-          <div className="mt-7 grid grid-cols-2 gap-4 md:gap-5 xl:grid-cols-5">
+          <div className="mt-6 grid grid-cols-1 gap-4 min-[460px]:grid-cols-2 md:grid-cols-3 md:gap-5 xl:grid-cols-5">
             {products.slice(1, 6).map((product) => (
               <ProductCard key={`new-${product.id}`} product={product} />
             ))}
@@ -563,7 +563,7 @@ export default async function Home() {
         </section>
 
         <section className="home-shell mt-3 border-t border-[rgba(0,0,0,0.08)] bg-white py-10">
-          <div className="mx-auto grid max-w-[1650px] gap-10 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mx-auto grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
             {features.map((feature) => (
               <div key={feature.title} className="text-center">
                 <div className="mx-auto flex h-18 w-18 items-center justify-center rounded-full bg-[#fff1f5] px-3 text-[0.95rem] font-semibold text-[#ef7f41]">

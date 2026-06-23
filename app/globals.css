@@ -71,16 +71,30 @@ img {
 }
 
 .home-shell {
-  width: min(100%, 1660px);
+  width: min(100%, 1440px);
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(18px, 3vw, 40px);
-  padding-right: clamp(18px, 3vw, 40px);
+  padding-left: clamp(16px, 2.5vw, 32px);
+  padding-right: clamp(16px, 2.5vw, 32px);
 }
 
 .home-section {
-  padding-top: clamp(22px, 3vw, 34px);
-  padding-bottom: clamp(22px, 3vw, 34px);
+  padding-top: clamp(24px, 3.2vw, 40px);
+  padding-bottom: clamp(24px, 3.2vw, 40px);
+}
+
+.home-section-heading {
+  color: #000;
+  font-size: clamp(1.45rem, 1.15rem + 1vw, 2rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.home-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .review-marquee-track {
@@ -140,5 +154,9 @@ img {
   .home-shell {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .home-section-header {
+    align-items: flex-start;
   }
 }
